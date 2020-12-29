@@ -166,16 +166,16 @@ public class Netbanking implements EntryPoint,ClickHandler {
 		Label frmLabel=new Label();
 		frmLabel.setText("New to NetBanking ?");
 		Hyperlink newNBhyperLink=new Hyperlink();
-		newNBhyperLink.setText("View Demo");
+		newNBhyperLink.setText("Register");
 		newNBhyperLink.addDomHandler(new ClickHandler()
 				{
 
 					@Override
 					public void onClick(ClickEvent event) {
 						// TODO Auto-generated method stub
-						new RegistrationPopup().show();
+						//new RegistrationPopup().show();
 						
-						//regPanel.add(new RegistrationForm());
+						regPanel.add(new RegistrationForm());
 					}
 			
 				}, ClickEvent.getType());

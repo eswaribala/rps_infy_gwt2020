@@ -11,5 +11,11 @@
 	<classpathentry kind="lib" path="E:/software/A08/file/smartgwt-13.0d/smartgwt-skins.jar"/>
 	<classpathentry kind="lib" path="G:/Local disk/GWT/gwt-table-to-excel-master/gwt-table-to-excel-demo/clientlib/gwt-visualization.jar"/>
 	<classpathentry kind="lib" path="E:/software/A08/file/itextpdf-5.4.2.jar/itextpdf-5.4.2.jar"/>
+	<classpathentry kind="lib" path="E:/software/A08/file/gwt-jackson-remotelogging-0.15.4.jar"/>
+	<classpathentry kind="lib" path="E:/software/A08/file/gwt-jackson-objectify-0.15.4.jar"/>
+	<classpathentry kind="lib" path="E:/software/A08/file/gwt-jackson-guava-0.15.4.jar"/>
+	<classpathentry kind="lib" path="E:/software/A08/file/jar_files/jackson-annotations-2.7.2.jar"/>
+	<classpathentry kind="lib" path="E:/software/A08/file/javapoet-1.0.0.jar"/>
+	<classpathentry kind="lib" path="E:/software/A08/file/jackson-annotations-2.7.2-sources.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
