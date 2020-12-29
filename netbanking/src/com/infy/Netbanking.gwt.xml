@@ -8,7 +8,8 @@
 <module rename-to='netbanking'>
   <!-- Inherit the core Web Toolkit stuff.                        -->
   <inherits name='com.google.gwt.user.User'/>
-
+<inherits name='com.google.gwt.visualization.Visualization'/>
+    
   <!-- Inherit the default GWT style sheet.  You can change       -->
   <!-- the theme of your GWT application by uncommenting          -->
   <!-- any one of the following lines.                            -->
@@ -17,7 +18,7 @@
   <!-- <inherits name='com.google.gwt.user.theme.standard.Standard'/> -->
   <!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
   <!--<inherits name='com.google.gwt.user.theme.dark.Dark'/>  -->
-
+<inherits name="com.google.web.bindery.autobean.AutoBean"/>
   <!-- Other module inherits                                      -->
 
   <!-- Specify the app entry point class.                         -->

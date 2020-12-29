@@ -31,8 +31,8 @@ public class LoginView extends Composite implements ClickHandler {
 
     // The input widgets will be stacked from top to bottom, so a vertical panel
     // is created and used as the base panel of the composite object.
-    final VerticalPanel loanFormMainPanel = new VerticalPanel();
-
+   final VerticalPanel loanFormMainPanel = new VerticalPanel();
+	  loginPanel=new VerticalPanel();
     // Each input elements requires a label and input field. These should be
     // displayed together from left to right. So, a horizontal panel needs to be
     // created for each input
@@ -72,8 +72,8 @@ public class LoginView extends Composite implements ClickHandler {
 	loginPanel.add(grid);
 	loginPanel.add(newNBGrid);
 	loginPanel.setStyleName("gwt-Logo-Panel");
-    loanFormMainPanel.add(loginPanel);
-    hPanelItem1.setStyleName("loanForm-Panel");
+   loanFormMainPanel.add(loginPanel);
+   //hPanelItem1.setStyleName("loanForm-Panel");
 
     
 
@@ -88,7 +88,7 @@ public class LoginView extends Composite implements ClickHandler {
 public void onClick(ClickEvent event) {
 	// TODO Auto-generated method stub
 	Window.alert("Sign Out Button Triggered");
-	RootPanel.get().clear();
+	//RootPanel.get().clear();
 	
 }
 

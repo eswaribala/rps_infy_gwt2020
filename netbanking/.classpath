@@ -4,6 +4,12 @@
 	<classpathentry kind="src" output="test-classes" path="test"/>
 	<classpathentry kind="con" path="com.gwtplugins.gwt.eclipse.core.GWT_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="E:/software/A08/file/gson-2.2.2.jar/gson-2.2.2.jar"/>
+	<classpathentry kind="lib" path="E:/software/A08/file/gwt-jackson-0.15.4.jar"/>
+	<classpathentry kind="lib" path="E:/software/A08/file/sts-4.5.0.RELEASE/plugins/org.springframework.tooling.bosh.ls_1.14.0.201912170939/servers/bosh-language-server/BOOT-INF/lib/gson-2.8.6.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/smartgwt"/>
+	<classpathentry kind="lib" path="E:/software/A08/file/smartgwt-13.0d/smartgwt.jar"/>
+	<classpathentry kind="lib" path="E:/software/A08/file/smartgwt-13.0d/smartgwt-skins.jar"/>
+	<classpathentry kind="lib" path="G:/Local disk/GWT/gwt-table-to-excel-master/gwt-table-to-excel-demo/clientlib/gwt-visualization.jar"/>
+	<classpathentry kind="lib" path="E:/software/A08/file/itextpdf-5.4.2.jar/itextpdf-5.4.2.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

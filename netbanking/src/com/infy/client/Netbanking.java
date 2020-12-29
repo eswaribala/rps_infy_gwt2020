@@ -47,7 +47,9 @@ public class Netbanking implements EntryPoint,ClickHandler {
 	private TextBox frmCustomerId;
 	private PasswordTextBox frmPassword;
 	private VerticalPanel resultPanel;
-	private VerticalPanel loginPanel;
+	private VerticalPanel loginPanel,regPanel;
+	private HorizontalPanel horizontalPanel;
+	private DockLayoutPanel dockLayoutPanel;
 	private static List<String> newsList=new ArrayList<String>();
 	static
 	{
@@ -61,12 +63,15 @@ public class Netbanking implements EntryPoint,ClickHandler {
 	public void onModuleLoad() {	
 	
 		resultLbl=new Label();
+		regPanel=new VerticalPanel();
 		resultPanel=new VerticalPanel();
-		HorizontalPanel horizontalPanel = new HorizontalPanel();      	
+		horizontalPanel = new HorizontalPanel();      	
 		horizontalPanel.add(createLogoPanel());
+		
 		horizontalPanel.add(createVerticalLine());	
-		horizontalPanel.add(createBanner());		
-        DockLayoutPanel dockLayoutPanel=new DockLayoutPanel(Unit.PX);
+		horizontalPanel.add(createBanner());
+		
+        dockLayoutPanel=new DockLayoutPanel(Unit.PX);
         dockLayoutPanel.addWest(horizontalPanel, 2000);        
 		RootLayoutPanel.get().add(dockLayoutPanel);		
 		
@@ -82,7 +87,7 @@ public class Netbanking implements EntryPoint,ClickHandler {
 		HTML hrLine = new HTML("<hr  style=\"width:100%;background-color:red;border: none; border-bottom: 1px solid red;\" />");
 		verticalPanel.add(hrLine);
 		verticalPanel.add(createHeader());
-		verticalPanel.add(createLoginPanel());
+	    verticalPanel.add(createLoginPanel());
 		return verticalPanel;		
 	}
 	
@@ -114,6 +119,7 @@ public class Netbanking implements EntryPoint,ClickHandler {
 		
 		timer.scheduleRepeating(1000);
 		verticalPanel.add(newsLbl);
+		verticalPanel.add(regPanel);
 		verticalPanel.add(resultPanel);
 		return verticalPanel;
 	}
@@ -161,6 +167,18 @@ public class Netbanking implements EntryPoint,ClickHandler {
 		frmLabel.setText("New to NetBanking ?");
 		Hyperlink newNBhyperLink=new Hyperlink();
 		newNBhyperLink.setText("View Demo");
+		newNBhyperLink.addDomHandler(new ClickHandler()
+				{
+
+					@Override
+					public void onClick(ClickEvent event) {
+						// TODO Auto-generated method stub
+						new RegistrationPopup().show();
+						
+						//regPanel.add(new RegistrationForm());
+					}
+			
+				}, ClickEvent.getType());
 		newNBGrid.setWidget(0, 0,frmLabel);
 		newNBGrid.setWidget(0, 1,newNBhyperLink);
 		loginPanel.add(grid);
@@ -176,45 +194,7 @@ public class Netbanking implements EntryPoint,ClickHandler {
 
 	@Override
 	public void onClick(ClickEvent event) {
-		/*
-		String customerId=frmCustomerId.getText();
-		//REST call
-		 String url = "http://localhost:6070/findboagwtuserbyname/"+customerId;
-		 RequestBuilder builder = new RequestBuilder(RequestBuilder.GET, URL.encode(url));
-
-		 try {
-		  Request request = builder.sendRequest(null, new RequestCallback() {
-		   public void onError(Request request, Throwable exception) {
-		     // Couldn't connect to server (could be timeout, SOP violation, etc.)
-		   }
-
-		   public void onResponseReceived(Request request, Response response) {
-		    if (200 == response.getStatusCode()) {
-		      // Process the response in response.getText()
-		    	Window.alert(response.getText());
-		    	frmCustomerId.setText("");
-				frmPassword.setText("");
-				
-				if(response.getText().equals("true"))
-				{
-				resultPanel.clear();
-				resultPanel.add(new LoanRequestForm());
-				}
-				else
-					resultPanel.clear();
-		    } else {
-		     // Handle the error.  Can get the status text from response.getStatusText()
-		    	Window.alert(response.getText());
-		    }
-		   }
-		  });
-		 } catch (RequestException e) {
-		  // Couldn't connect to server
-		 }		
-		
-		*/
-		
-		
+			
 		
 
 		
@@ -233,12 +213,14 @@ public class Netbanking implements EntryPoint,ClickHandler {
 				// TODO Auto-generated method stub
 				//frmCustomerId.setText("");
 				//frmPassword.setText("");
+				String customerName=frmCustomerId.getText();
 				loginPanel.clear();
+				regPanel.clear();
 				boolean status=(boolean) result;
 				if(status)
 				{
 				resultPanel.clear();
-				resultPanel.add(new AccountSummaryView());
+				resultPanel.add(new AccountSummaryView(customerName));
 				}
 				else
 					resultPanel.clear();

@@ -2,6 +2,22 @@
 
 
 /** Example rules used by the template application (remove for your app) */
+body
+{
+	font-size: medium;
+	font-weight: bold;
+	color: navy;
+	overflow: scroll;
+	
+	
+}
+::-webkit-scrollbar { width: 3px; height: 3px;}
+::-webkit-scrollbar-button {  background-color: #666; }
+::-webkit-scrollbar-track {  background-color: #999;}
+::-webkit-scrollbar-track-piece { background-color: #ffffff;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #999;}}
+::-webkit-resizer { background-color: #666;}
 h1 {
   font-size: 2em;
   font-weight: bold;
@@ -42,6 +58,7 @@ h1 {
 }
 .gwt-Logo-Panel{
 	background-color: lightgray;
+	
 }
 .login-button
 {
@@ -71,5 +88,23 @@ h1 {
 		font-size: medium;
 	    font-weight: bold;
 		border-radius: 5px 5px 5px 5px;
-		margin-left: 600px;
+		margin-left: 50px;
+}
+
+.menubar-HPanel
+{
+	background-color: yellow;
+	
+}
+.printer-Panel
+{
+	margin-top: 30px;
+	padding:30px;
+	display: flex;
+}
+
+.export
+{
+	width:700px;
+	margin-top: 25px;
 }

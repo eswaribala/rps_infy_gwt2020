@@ -13,6 +13,34 @@
   <servlet-name>LoginService</servlet-name>
   <url-pattern>/netbanking/loginservice</url-pattern>  
   </servlet-mapping>
+  
+  <servlet>
+		<servlet-name>gwtTableToExcelServlet</servlet-name>
+		<servlet-class>com.infy.server.TableToExcelServlet</servlet-class>
+		
+	</servlet>
+	
+
+	<servlet-mapping>
+		<servlet-name>gwtTableToExcelServlet</servlet-name>
+		<url-pattern>/netbanking/excel</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>gwtTableToPDFServlet</servlet-name>
+		<servlet-class>com.infy.server.TableToPDFServlet</servlet-class>
+		
+	</servlet>
+	
+
+	<servlet-mapping>
+		<servlet-name>gwtTableToPDFServlet</servlet-name>
+		<url-pattern>/netbanking/pdf</url-pattern>
+	</servlet-mapping>
+	
+
+	
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>Netbanking.html</welcome-file>
